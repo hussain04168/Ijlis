@@ -30,6 +30,7 @@ a {
   --mainFontSize: 1.25rem;
   --btnPadding: 0.5em 0.75em;
   --btnTransition: 0.3s ease-in-out;
+  --mainLetterSpacing: 0.05em;
 }
 /******************
 ** Variables end 
@@ -64,6 +65,7 @@ body {
   /* background-color: antiquewhite; */
   justify-content: space-around;
   width: 50%;
+  letter-spacing: var(--mainLetterSpacing);
 }
 
 .nav-list a {
@@ -105,6 +107,7 @@ body {
   cursor: pointer;
   color: var(--mainColor);
   transition: var(--btnTransition);
+  letter-spacing: var(--mainLetterSpacing);
 }
 
 .hero-statement {
@@ -112,6 +115,7 @@ body {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
+  letter-spacing: var(--mainLetterSpacing);
 }
 
 .shop-btn:hover {
@@ -126,3 +130,75 @@ body {
 /******************
 ** Hero end 
 *******************/
+
+/******************************
+ ** Featured collection start
+*******************************/
+.featured-collection-container {
+  display: flex;
+  position: relative;
+}
+
+/***** Featured collection shop start ******/
+.featured-collection-shop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  background-color: var(--fourthColor);
+  /* position: sticky; */
+  /* top: 0%; */
+  /* bottom: 0%; */
+}
+
+.featured-collection-title {
+  letter-spacing: 0.1em;
+}
+
+.featured-collection-btn {
+  padding: var(--btnPadding);
+  font-size: var(--mainFontSize);
+  color: var(--fourthColor);
+  background-color: var(--mainColor);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: var(--btnTransition);
+  border-radius: 3px;
+}
+
+.featured-collection-btn:hover {
+  background-color: hsl(26, 34%, 33%);
+}
+/***** Featured collection shop end ******/
+
+/***** Featured collection selection start ******/
+.featured-collection-selection-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 50%;
+  overflow: scroll;
+}
+
+.featured-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid white;
+  background-color: hsl(0, 0%, 95%);
+  padding: 2rem 0.5rem;
+}
+
+.featured-img {
+  width: 300px;
+}
+/***** Featured collection selection start ******/
+
+/******************************
+  ** Featured collection end
+*******************************/
