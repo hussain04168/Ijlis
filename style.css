@@ -1,0 +1,128 @@
+/********************
+** Reset start  
+*********************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/****************
+** Reset end  
+*****************/
+
+/******************
+** Variables start  
+*******************/
+:root {
+  --mainFontColor: hsl(0, 0%, 25%);
+  --standoutFontColor: hsl(0, 0%, 2%);
+  --mainColor: #523a28;
+  --secondaryColor: #a47551;
+  --thirdColor: #d0b49f;
+  --fourthColor: #e4dac8;
+  --mainFontSize: 1.25rem;
+  --btnPadding: 0.5em 0.75em;
+  --btnTransition: 0.3s ease-in-out;
+}
+/******************
+** Variables end 
+********************/
+
+/*******************
+** Body start  
+*******************/
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--mainFontColor);
+  font-size: var(--mainFontSize);
+}
+
+/*******************
+** Body end 
+*******************/
+
+/*********************
+** Navigation start  
+**********************/
+.navigation-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--fourthColor);
+  padding: 1.2em 0;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  /* background-color: antiquewhite; */
+  justify-content: space-around;
+  width: 50%;
+}
+
+.nav-list a {
+  color: var(--mainColor);
+}
+
+.nav-list li:hover,
+.nav-list a:hover {
+  color: var(--secondaryColor);
+}
+
+/*********************
+** Navigation start  
+**********************/
+
+/******************
+** Hero start  
+*******************/
+
+.hero-container {
+  background: url(heroImg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vh - 3.4em);
+  position: relative;
+}
+
+.shop-btn {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: var(--btnPadding);
+  outline: none;
+  background: none;
+  font-size: 1.5rem;
+  border: 5px solid var(--mainColor);
+  border-radius: 2px;
+  cursor: pointer;
+  color: var(--mainColor);
+  transition: var(--btnTransition);
+}
+
+.hero-statement {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.shop-btn:hover {
+  background-color: var(--mainColor);
+  color: var(--fourthColor);
+}
+
+.ijlis {
+  color: var(--secondaryColor);
+}
+
+/******************
+** Hero end 
+*******************/
