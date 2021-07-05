@@ -59,6 +59,10 @@ body {
   padding: 1.2em 0;
 }
 
+.company-logo {
+  width: 110px;
+}
+
 .nav-list {
   list-style: none;
   display: flex;
@@ -78,7 +82,7 @@ body {
 }
 
 /*********************
-** Navigation start  
+** Navigation end 
 **********************/
 
 /******************
@@ -136,7 +140,8 @@ body {
 *******************************/
 .featured-collection-container {
   display: flex;
-  position: relative;
+  position: sticky;
+  top: 0%;
 }
 
 /***** Featured collection shop start ******/
@@ -195,7 +200,7 @@ body {
 }
 
 .featured-img {
-  width: 300px;
+  width: 400px;
 }
 /***** Featured collection selection start ******/
 
