@@ -57,6 +57,11 @@ body {
   justify-content: space-between;
   background-color: var(--fourthColor);
   padding: 1.2em 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
 }
 
 .company-logo {
@@ -140,8 +145,7 @@ body {
 *******************************/
 .featured-collection-container {
   display: flex;
-  position: sticky;
-  top: 0%;
+  position: relative;
 }
 
 /***** Featured collection shop start ******/
@@ -153,9 +157,9 @@ body {
   height: 100vh;
   width: 50%;
   background-color: var(--fourthColor);
-  /* position: sticky; */
-  /* top: 0%; */
-  /* bottom: 0%; */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0%;
 }
 
 .featured-collection-title {
@@ -206,4 +210,16 @@ body {
 
 /******************************
   ** Featured collection end
+*******************************/
+
+/******************************
+  ** Testimonials start
+*******************************/
+
+.testimonials-container {
+  height: 100vh;
+}
+
+/******************************
+  ** Testimonials end
 *******************************/
