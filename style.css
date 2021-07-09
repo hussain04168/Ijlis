@@ -218,6 +218,73 @@ body {
 
 .testimonials-container {
   height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "title title testimony1 testimony1"
+    "testimony2 testimony3 testimony4 testimony5"
+    "testimony6 button . .";
+  gap: 0.5em;
+  margin: 0.5rem 0;
+}
+
+.testimonial-title {
+  grid-area: title;
+  /* padding: 0.75em; */
+  place-self: center;
+}
+
+.testimony {
+  border: 2px solid var(--mainColor);
+  padding: 0.75em;
+  box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.8);
+  border-radius: 2.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimony-1 {
+  grid-area: testimony1;
+}
+
+.testimony-2 {
+  grid-area: testimony2;
+}
+
+.testimony-3 {
+  grid-area: testimony3;
+}
+
+.testimony-4 {
+  grid-area: testimony4;
+}
+
+.testimony-5 {
+  grid-area: testimony5;
+}
+
+.testimony-6 {
+  grid-area: testimony6;
+}
+
+.testimonies-btn {
+  grid-area: button;
+  height: max-content;
+  width: max-content;
+  font-size: 1.5rem;
+  padding: 0.5em 0.75em;
+  place-self: end start;
+  background-color: var(--mainColor);
+  color: var(--fourthColor);
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.testimonies-btn:hover {
+  background-color: hsl(26, 34%, 33%);
 }
 
 /******************************
