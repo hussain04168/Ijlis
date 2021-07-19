@@ -29,7 +29,7 @@ a {
   --fourthColor: #e4dac8;
   --mainFontSize: 1.25rem;
   --btnPadding: 0.5em 0.75em;
-  --btnTransition: 0.3s ease-in-out;
+  --btnTransition: all 0.3s ease-in-out;
   --mainLetterSpacing: 0.05em;
 }
 /******************
@@ -114,6 +114,7 @@ body {
   border: 5px solid var(--mainColor);
   border-radius: 2px;
   cursor: pointer;
+  font-weight: 700;
   color: var(--mainColor);
   transition: var(--btnTransition);
   letter-spacing: var(--mainLetterSpacing);
@@ -177,6 +178,7 @@ body {
   margin-top: 1rem;
   transition: var(--btnTransition);
   border-radius: 3px;
+  font-weight: 700;
 }
 
 .featured-collection-btn:hover {
@@ -282,6 +284,7 @@ body {
   outline: none;
   cursor: pointer;
   border-radius: 3px;
+  font-weight: 700;
 }
 
 .testimonies-btn:hover {
@@ -297,10 +300,80 @@ body {
 *******************************/
 footer {
   background-color: var(--thirdColor);
-  padding: 4em 0;
+  padding: 2em 1em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "contact social"
+    "contact payment"
+    "logo terms";
+  height: 80vh;
 }
+
+.contact-container {
+  grid-area: contact;
+  /* background-color: sandybrown; */
+  place-self: start center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  font-weight: 700;
+}
+
+.social-links-container {
+  grid-area: social;
+  display: flex;
+  flex-direction: column;
+  /* background-color: seagreen; */
+  justify-content: space-between;
+  height: 50%;
+}
+
+.social {
+  transition: var(--btnTransition);
+}
+
+.social:hover {
+  color: var(--fourthColor);
+}
+
+.payment-methods {
+  grid-area: payment;
+  /* background-color: seashell; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+}
+
+.terms-container {
+  grid-area: terms;
+  /* background-color: sienna; */
+}
+
+.terms-btn,
+.refund-btn {
+  background-color: var(--fourthColor);
+  color: var(--mainColor);
+  padding: var(--btnPadding);
+  border-radius: 5px;
+  letter-spacing: var(--mainLetterSpacing);
+  transition: var(--btnTransition);
+  font-weight: 700;
+}
+
+.terms-btn:hover,
+.refund-btn:hover {
+  background-color: var(--mainColor);
+  color: var(--fourthColor);
+}
+
+.footer-logo {
+  grid-area: logo;
+  place-self: start center;
+}
+
 /******************************
   ** Footer end
 *******************************/
